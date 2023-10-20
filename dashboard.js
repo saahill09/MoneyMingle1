@@ -1,4 +1,4 @@
-const dashboardContent = document.querySelector('.dashboard-content');
+const sidebarItems = document.querySelectorAll('.sidebar li');
 const overviewSection = document.getElementById('overviewSection');
 const transactionsSection = document.getElementById('transactionsSection');
 const makeGroupSection = document.getElementById('makeGroupSection');
@@ -46,3 +46,34 @@ function hideAllSections() {
 
 // Initial hide for all sections
 hideAllSections();
+
+sidebarItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Remove 'active' class from all sidebar items
+        sidebarItems.forEach(item => item.classList.remove('active'));
+
+        // Add 'active' class to the clicked item
+        item.classList.add('active');
+
+        // Clear previous content
+        hideAllSections();
+
+        // Load content based on the clicked option
+        const option = item.textContent.trim().toLowerCase();
+        if (option === 'overview') {
+            overviewSection.style.display = 'block';
+        } else if (option === 'transactions') {
+            transactionsSection.style.display = 'block';
+        } else if (option === 'make group') {
+            makeGroupSection.style.display = 'block';
+        } else if (option === 'split expense') {
+            splitExpenseSection.style.display = 'block';
+        } else if (option === 'history') {
+            historySection.style.display = 'block';
+        } else if (option === 'budget') {
+            budgetSection.style.display = 'block';
+        } else if (option === 'wallet') {
+            walletSection.style.display = 'block';
+        }
+    });
+});
