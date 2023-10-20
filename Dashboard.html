@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard - MoneyMingle</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">Money</span><span class="second-text">Mingle</span>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li onclick="showContent('overview')">Overview</li>
+            <li onclick="showContent('transactions')">Transactions</li>
+            <li onclick="showContent('makeGroup')">Make Group</li>
+            <li onclick="showContent('splitExpense')">Split Expense</li>
+            <li onclick="showContent('history')">History</li>
+            <li onclick="showContent('budget')">Budget</li>
+            <li onclick="showContent('wallet')">Wallet</li>
+        </ul>
+    </aside>
+
+    <main class="dashboard-content">
+        <section id="overviewSection">
+            <h2>Overview</h2>
+            <p>Default Overview Description.</p>
+        </section>
+        <section id="transactionsSection">
+            <h2>Transactions</h2>
+            <p>Default Transactions Description.</p>
+        </section>
+        <section id="makeGroupSection">
+            <h2>Make Group</h2>
+            <p>Default Make Group Description.</p>
+        </section>
+        <section id="splitExpenseSection">
+            <h2>Split Expense</h2>
+            <p>Default Split Expense Description.</p>
+        </section>
+        <section id="historySection">
+            <h2>History</h2>
+            <p>Default History Description.</p>
+        </section>
+        <section id="budgetSection">
+            <h2>Budget</h2>
+            <p>Default Budget Description.</p>
+        </section>
+        <section id="walletSection">
+            <h2>Wallet</h2>
+            <p>Default Wallet Description.</p>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
