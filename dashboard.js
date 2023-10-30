@@ -9,30 +9,45 @@ const walletSection = document.getElementById('walletSection');
 
 function showContent(option) {
     hideAllSections();
+
     switch (option) {
         case 'overview':
-            overviewSection.style.display = 'block';
+            loadPage('overview.html', overviewSection);            
             break;
         case 'transactions':
-            transactionsSection.style.display = 'block';
+            loadPage('transaction.html', transactionsSection);
             break;
         case 'makeGroup':
-            makeGroupSection.style.display = 'block';
+            loadPage('makeGroup.html', makeGroupSection);
             break;
         case 'splitExpense':
-            splitExpenseSection.style.display = 'block';
+            loadPage('splitExpense.html', splitExpenseSection);
             break;
         case 'history':
-            historySection.style.display = 'block';
+            loadPage('history.html', historySection);
             break;
         case 'budget':
-            budgetSection.style.display = 'block';
+            loadPage('budget.html', budgetSection);
             break;
         case 'wallet':
-            walletSection.style.display = 'block';
+            loadPage('wallet.html', walletSection);
             break;
     }
 }
+
+function loadPage(pageUrl, targetElement) {
+    fetch(pageUrl)
+        .then(response => response.text())
+        .then(data => {
+            targetElement.innerHTML = data;
+            console.log(`Loaded content from ${pageUrl}`); // Add this line for debugging
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
 
 function hideAllSections() {
     overviewSection.style.display = 'none';
