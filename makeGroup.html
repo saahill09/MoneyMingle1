@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="makeGroup.css">
+    <title>Make Group - MoneyMingle</title>
+</head>
+
+<body>
+    <header>
+       
+    </header>
+
+    <main class="group-form-container">
+        <h2>Create a New Group</h2>
+        <form id="groupForm">
+            <label for="groupName">Group Name:</label>
+            <input type="text" id="groupName" required>
+
+            <label for="groupPurpose">Group Purpose:</label>
+            <input type="text" id="groupPurpose" required>
+
+            <label for="inviteMembers">Invite Members (comma-separated emails):</label>
+            <input type="text" id="inviteMembers" required>
+
+            <button type="submit">Create Group</button>
+        </form>
+    </main>
+
+    <script src="makeGroup.js"></script>
+</body>
+
+</html>
