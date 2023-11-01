@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+import { getAuth,displaySplitResults, addPersonToGroup,createUserWithEmailAndPassword, calculateSplit,signInWithEmailAndPassword, signOut,displayGroups } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     const expenseForm = document.getElementById('expenseForm');
     const groupMembersSelect = document.getElementById('groupMembers');
@@ -69,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const listItem = document.createElement('li');
             listItem.textContent = `${description} - ${members[i]}: $${amounts[i].toFixed(2)}`;
             splitResults.appendChild(listItem);
+            
         }
     }
 });
